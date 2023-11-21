@@ -1,0 +1,16 @@
+@mixin font-h ($size:1.6rem, $weight:600, $style: normal, $line-height: 125%) {
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  line-height: $line-height;
+  color: $color-text-dark;
+}
+
+//@mixin link_button () {
+//  coo
+//  font-family: Inter;
+//  font-size: 14px;
+//  font-style: normal;
+//  font-weight: 400;
+//  line-height: 20px; /* 142.857% */
+//}

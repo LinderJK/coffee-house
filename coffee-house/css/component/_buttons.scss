@@ -1,0 +1,75 @@
+
+.button-app {
+  @extend %transition;
+  @extend %button;
+  padding: 12px 20px;
+  border: 1px solid $color-border-dark;
+
+  &:hover {
+    background-color: $color-background-container;
+    color: $color-text-light;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
+.button-primary {
+  @extend %transition;
+  @extend %button;
+  padding: 20px 78px;
+  background-color: $color-background-body;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+  }
+
+}
+
+.button-secondary {
+  @extend %transition;
+  @extend %button;
+  padding: 10px 78px;
+  border: 1px solid $color-border-dark;
+
+  &:hover {
+    background-color: $color-background-container;
+    color: $color-text-light;
+  }
+}
+
+
+.text__button {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+}
+
+.text__caption {
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%; /* 14px */
+}
+
+
+
+
+
+
+.button {
+  //display: flex;
+  //width: 200px;
+  //justify-content: center;
+  //align-items: center;
+  //gap: 8px;
+  //border-radius: 100px;
+  //padding: 20px 78px;
+}

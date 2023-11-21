@@ -1,9 +1,18 @@
-
+@import "base/normalize";
+//Abstract
 @import "abstract/constants";
-@import "layout/wrapper";
+@import "abstract/placeholders";
+@import "abstract/mixins";
+
+//Base
 @import "base/base";
 
-
+//Layout
+@import "layout/wrapper";
+@import "layout/header";
 
 //Component
-@import "component/contacts";
+@import "component/nav";
+@import "component/buttons";
+
+

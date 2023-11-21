@@ -1,0 +1,37 @@
+.nav {
+  display: flex;
+  gap: 40px;
+  cursor: pointer;
+  padding: 0;
+
+  &__item {
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    padding-bottom: 4px;
+    @extend %item-underline;
+    @include font-h($weight:600, $line-height:150%);
+  }
+
+}
+
+.menu {
+  @extend %item-underline;
+  @include font-h($weight:600, $line-height:150%);
+
+
+  &__item {
+    display: flex;
+    gap:8px;
+    cursor: pointer;
+    padding-bottom: 4px;
+  }
+}
+
+.logo {
+
+  &__image {
+    width: 100px;
+    height: 60px;
+  }
+}
