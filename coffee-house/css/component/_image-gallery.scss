@@ -1,0 +1,33 @@
+.image-gallery {
+  display: flex;
+  gap: 40px;
+  flex-flow: column wrap;
+  height:1060px;
+
+}
+
+.image-gallery__item:nth-child(3n-2),
+.image-gallery__item:nth-child(3n+1) {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 660px;
+  height: 590px;
+
+}
+
+.image-gallery__item:nth-child(3n-1),
+.image-gallery__item:nth-child(3n) {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 660px;
+  height: 430px;
+}
+
+.image-gallery__item img {
+  height: 100%;
+  width: 100%;
+  object-fit:none;
+}
+
+
+
