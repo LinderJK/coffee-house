@@ -9,14 +9,14 @@
     list-style: none;
     text-decoration: none;
     padding-bottom: 4px;
-    @extend %item-underline;
+    @include item-underline($color:$color-border-dark);
     @include font-h($weight:600, $line-height:150%);
   }
 
 }
 
 .menu {
-  @extend %item-underline;
+  @include item-underline($color:$color-border-dark);
   @include font-h($weight:600, $line-height:150%);
 
 

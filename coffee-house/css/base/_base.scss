@@ -46,3 +46,15 @@ button {
 i {
   color: $color-text-accent;
 }
+
+.text-caption {
+  @include font-h($size:10px, $line-height:150%);
+}
+
+.text-action {
+  @include font-h($line-height:150%);
+}
+.text-link {
+  @include font-h($size:16px, $weight:600, $line-height:150%);
+}
+

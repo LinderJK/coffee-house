@@ -1,0 +1,21 @@
+.mobile-app {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+
+  img {
+    width: 630px;
+    height: 630px;
+  }
+  &__content {
+    @extend %offer;
+    align-self: center;
+  }
+}
+
+.mobile-app__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+}

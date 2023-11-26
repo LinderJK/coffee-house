@@ -10,10 +10,8 @@
   }
 }
 .enjoy-content {
-  display: flex;
-  flex-direction: column;
+  @extend %offer;
   width: 530px;
-  gap: 40px;
 
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +45,7 @@
           </div>
           <div class="enjoy-content__button">
             <button class="button button-primary">Menu
-              <div class="button-primary__icon"></div>
+              <span class="button-primary__icon"></span>
             </button>
           </div>
         </div>
@@ -56,13 +56,13 @@
         <div class="slider">
 
             <button class="button-icon button-icon--dark ">
-              <svg class="arrow-icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <svg class="icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
 
             <div class="slider-items__content">
-              <img class="slider-image" src="./img/slider/57d082ae9774ffeb8a409a788e05fef3.png" alt="">
+              <img class="slider-image" src="./img/slider/slide-1.png" alt="">
               <div class="slider-description">
                 <h3>S’mores Frappuccino</h3>
                 <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
@@ -70,7 +70,7 @@
               </div>
             </div>
             <button class="button-icon button-icon--dark ">
-              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
@@ -93,49 +93,101 @@
       <h2>Resource is <i>the perfect and cozy place</i> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
       <div class="image-gallery">
         <div class="image-gallery__item">
-          <img src="./img/gallery/about-1.jpeg">
+          <img src="./img/gallery/about-1.jpeg" alt="gallery-image-one">
         </div>
         <div class="image-gallery__item">
-          <img src="./img/gallery/about-2.jpeg">
+          <img src="./img/gallery/about-2.jpeg" alt="gallery-image-two">
         </div>
         <div class="image-gallery__item">
-          <img src="./img/gallery/about-3.jpeg">
+          <img src="./img/gallery/about-3.jpeg" alt="gallery-image-three">
         </div>
         <div class="image-gallery__item">
-          <img src="./img/gallery/about-4.jpeg">
+          <img src="./img/gallery/about-4.jpeg" alt="gallery-image-four">
         </div>
       </div>
     </section>
 
     <section class="mobile-app">
+      <div class="mobile-app__content">
+        <h2><i>Download</i> our apps to start ordering</h2>
+        <p>Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
+        <div class="mobile-app__buttons">
+          <button class="button button-app">
+            <object class="button-app__icon" data="img/icons/icon-apple.svg" type="image/svg+xml"></object>
+            <span class="button-app__content">
+              <span class="text text-caption">Available on the</span>
+              <span class="text text-action">App Store</span>
+            </span>
+          </button>
+
+          <button class="button button-app">
+            <object class="button-app__icon" data="img/icons/icon-gstore.svg" type="image/svg+xml"></object>
+            <span class="button-app__content">
+              <span class="text text-caption">Available on</span>
+              <span class="text text-action">Google Play</span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <img class="mobile-app__image" src="./img/mobile-app/mobile.png" alt="mobile-image">
 
     </section>
       </div>
     </main>
 
-    <footer class="contacts">
+    <footer>
+      <div class="container">
+        <div class="footer">
 
-        <h3>12313213131</h3>
-      <button class="button button-app">
-        <object class="button-app__icon" data="img/icons/icon.svg" type="image/svg+xml"></object>
-        <div class="button-app__content">
-          <span class="text text__caption">Available on the</span>
-          <span class="text text__button">App Store</span>
-        </div>
-      </button>
+          <div class="footer__description">
+            <h2>Sip, Savor, Smile. <i>It’s coffee time!</i></h2>
+            <div class="social">
+              <button class="button-icon button-icon--light ">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="button-icon button-icon--light">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="#E1D4C9"/>
+                  <path d="M17.5 6.51L17.51 6.49889" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="button-icon button-icon--light ">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="footer__contactus">
+            <h3>Contact us</h3>
+            <ul class="link">
+              <li class="link__item">
+                <div class="item-content">
+                <img src="./img/icons/pin-alt.svg" alt="icon-address">
+                <p class="text-link">8558 Green Rd.,  LA</p>
+                </div>
+              </li>
+              <li class="link__item">
+                <div class="item-content">
+                <img src="./img/icons/phone.svg" alt="icon-phone">
+                <p class="text-link">+1 (603) 555-0123</p>
+                </div>
+              </li>
+              <li class="link__item">
+                <div class="item-content">
+                <img src="./img/icons/clock.svg" alt="icon-clock">
+                <p class="text-link">Mon-Sat: 9:00 AM – 23:00 PM</p>
+                </div>
+              </li>
 
-      <button class="button button-primary">
-        <div class="button-primary__content">
-          <span class="text text__button">Menu</span>
-        </div>
+            </ul>
 
-      </button>
-
-      <button class="button button-secondary">
-        <span class="text text__button">Close</span>
-      </button>
-
-
+          </div>
+      </div>
+      </div>
     </footer>
 
   </div>
