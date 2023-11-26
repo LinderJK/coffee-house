@@ -1,0 +1,16 @@
+{
+  "name": "linderjk-jsfe2023q4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "sass coffee-house/css/style.scss coffee-house/css/build/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "sass": "^1.69.5"
+  }
+}
