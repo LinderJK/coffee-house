@@ -15,7 +15,7 @@
 
 }
 
-.menu {
+.menu-link {
   @include item-underline($color:$color-border-dark);
   @include font-h($weight:600, $line-height:150%);
 

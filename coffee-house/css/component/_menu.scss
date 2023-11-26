@@ -1,0 +1,38 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+
+}
+
+.menu-head {
+  margin-bottom: -5px;
+  width: 800px;
+  text-align: center;
+}
+
+.menu-tab {
+  display: flex;
+  flex-direction:row;
+  gap: 16px;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  cursor: pointer;
+
+}
+
+.preview__description {
+  display: flex;
+  padding: 20px;
+
+}
+
