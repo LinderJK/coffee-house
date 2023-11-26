@@ -18,10 +18,10 @@
       </a>
       <nav>
         <ul class="nav">
-          <li class="nav__item">Favorite coffee</li>
-          <li class="nav__item">About</li>
-          <li class="nav__item">Mobile app</li>
-          <li class="nav__item">Contact us</li>
+          <li class="nav__item"><a href="">Favorite coffee</a></li>
+          <li class="nav__item"><a href=""></a>About</li>
+          <li class="nav__item"><a href=""></a>Mobile app</li>
+          <li class="nav__item"><a href=""></a>Contact us</li>
         </ul>
       </nav>
       <div class="menu">
@@ -54,8 +54,13 @@
     <section class="favourites-coffee">
         <h2>Choose your <i>favorite</i> coffee</h2>
         <div class="slider">
-          <div class="slider-item">
-            <div class="slider-items__button"></div>
+
+            <button class="button-icon button-icon--dark ">
+              <svg class="arrow-icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
             <div class="slider-items__content">
               <img class="slider-image" src="./img/slider/57d082ae9774ffeb8a409a788e05fef3.png" alt="">
               <div class="slider-description">
@@ -64,14 +69,24 @@
                 <h3>$5.50</h3>
               </div>
             </div>
-            <div class="slider-items__button"></div>
-          </div>
-
+            <button class="button-icon button-icon--dark ">
+              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
 
         </div>
-      <div class="control">
-        <span>1</span>
-      </div>
+      <ul class="slider-control">
+        <li>
+          <div class="slider-control__item slider-control__item--active"></div>
+        </li>
+        <li>
+          <div class="slider-control__item"></div>
+        </li>
+        <li>
+          <div class="slider-control__item"></div>
+        </li>
+      </ul>
     </section>
 
     <section class="about">

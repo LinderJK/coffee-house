@@ -26,6 +26,67 @@
 
 }
 
+.button-icon {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+
+  &--dark {
+    border: 1px solid $color-border-dark;
+    &:hover {
+
+      @extend %transition;
+      background: $color-background-container;
+
+      .arrow-icon path {
+        stroke: $color-border-light;
+      }
+    }
+  }
+
+  &--light {
+    border: 1px solid $color-border-light;
+  }
+
+}
+
+//.button-icon::after {
+//  content: "";
+//  position: absolute;
+//  width: 24px;
+//  height: 24px;
+//  top: 50%;
+//  right: 16px;
+//  transform: translateY(-50%);
+//
+//  }
+//
+//.button-icon__left::after {
+//  background: url("../img/icons/arrow-left.svg") no-repeat;
+//
+//}
+//
+//.button-icon__right::after {
+//  background: url("../img/icons/arrow-right.svg") no-repeat;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
 //.button-secondary {
 //  @extend %transition;
 //  @extend %button;
