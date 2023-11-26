@@ -7,6 +7,14 @@
   max-width: 310px;
   height: 506px;
 
+  &:hover {
+    .preview__image img {
+      transform: scale(1.0);
+    }
+  }
+
+
+
 
 }
 
@@ -25,9 +33,6 @@
   transform: scale(1.1);
   transition: transform 700ms ease-in-out;
 
-  &:hover {
-    transform: scale(1.0);
-  }
 }
 
 .preview__description {

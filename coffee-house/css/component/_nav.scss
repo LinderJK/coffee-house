@@ -16,16 +16,25 @@
 }
 
 .menu-link {
-  @include item-underline($color:$color-border-dark);
   @include font-h($weight:600, $line-height:150%);
 
+  &--disabled {
+    user-select: none;
+
+  }
+
+  &--active {
+    cursor: pointer;
+    @include item-underline($color:$color-border-dark);
+  }
 
   &__item {
     display: flex;
     gap:8px;
-    cursor: pointer;
     padding-bottom: 4px;
   }
+
+
 }
 
 .logo {

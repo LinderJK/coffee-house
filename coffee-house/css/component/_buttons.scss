@@ -96,17 +96,19 @@
   border: 1px solid $color-border-light;
   background-color: inherit;
   color: $color-text-dark;
-  cursor: pointer;
   @extend  %transition;
+  cursor: pointer;
 
   &--active {
     background-color: $color-background-container;
     color: $color-text-light;
+    cursor: default;
   }
 
   &:hover {
     background-color: $color-background-container;
     color: $color-text-light;
+
   }
 
   &__icon {
