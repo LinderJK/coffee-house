@@ -6,15 +6,6 @@
   color: $color-text-dark;
 }
 
-//@mixin link_button () {
-//  coo
-//  font-family: Inter;
-//  font-size: 14px;
-//  font-style: normal;
-//  font-weight: 400;
-//  line-height: 20px; /* 142.857% */
-//}
-
 @mixin flex-column ($align:center, $gap: 20px,) {
   display: flex;
   flex-direction: column;
