@@ -9,7 +9,11 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: $color-text-dark;
+  background-color: $color-background-body;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 

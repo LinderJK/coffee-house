@@ -1,0 +1,21 @@
+.favourites-coffee {
+  @include flex-column ($gap:40px);
+}
+
+.slider-items__content {
+  @include flex-column($gap:20px);
+
+}
+
+.slider-image {
+  width: 480px;
+  height: 480px;
+
+}
+
+.slider-description {
+  @include flex-column ($gap:16px);
+  width: 480px;
+  text-align: center;
+
+}
