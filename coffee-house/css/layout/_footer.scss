@@ -13,7 +13,15 @@
   @include media-tablet {
     padding: 100px 60px;
     flex-direction: column;
-    height: 736px;
+  }
+
+  @include media-laptop {
+    flex-direction: column;
+  }
+
+  @include media-phone {
+    padding: 60px 16px;
+    gap: 40px;
   }
 }
 

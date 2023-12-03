@@ -8,14 +8,22 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  @include media-phone {
+    flex-direction: column;
+  }
+
+  @include media-tablet {
+    flex-direction: column;
+  }
+
 }
 
 .image-gallery__item {
+  width: 100%;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
-
-
 }
 
 .gallery-col {
@@ -33,20 +41,28 @@
 
 
 .image-small {
-  width: 660px;
-  height: 430px;
+  max-width: 660px;
+  max-height: 430px;
 
   @include media-tablet {
-    width: 688px;
+    max-width: 688px;
+  }
+
+  @include media-phone {
+    max-width: 348px;
   }
 }
 
 .image-large {
-  width: 660px;
+  max-width: 660px;
   height: 590px;
 
   @include media-tablet {
-    width: 688px;
+    max-width: 688px;
+  }
+
+  @include media-phone {
+    width: 348px;
   }
 }
 

@@ -354,6 +354,15 @@ h1 {
   line-height: 105%;
   color: #403F3D;
 }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 4.2rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 115%;
+    color: #403F3D;
+  }
+}
 
 h2 {
   font-size: 6rem;
@@ -361,6 +370,15 @@ h2 {
   font-style: normal;
   line-height: 125%;
   color: #403F3D;
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 125%;
+    color: #403F3D;
+  }
 }
 
 h3 {
@@ -426,6 +444,12 @@ i {
   padding: 20px 40px 40px 40px;
   background-color: #E1D4C9;
 }
+@media (max-width: 500px) {
+  .wrapper {
+    padding: 20px 16px 40px 16px;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -460,7 +484,17 @@ i {
   .footer {
     padding: 100px 60px;
     flex-direction: column;
-    height: 736px;
+  }
+}
+@media (max-width: 1440px) {
+  .footer {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .footer {
+    padding: 60px 16px;
+    gap: 40px;
   }
 }
 
@@ -767,14 +801,21 @@ i {
 }
 
 .enjoy {
+  display: flex;
   padding: 100px;
   border-radius: 40px;
   background-image: url("../img/background/img-hero.jpg");
-  background-size: auto;
+  background-size: cover;
+  background-position: center;
 }
 @media (max-width: 768px) {
   .enjoy {
     padding: 100px 60px;
+  }
+}
+@media (max-width: 500px) {
+  .enjoy {
+    padding: 60px 16px;
   }
 }
 .enjoy h1, .enjoy p {
@@ -806,8 +847,14 @@ i {
 }
 
 .slider-image {
-  width: 480px;
-  height: 480px;
+  max-width: 480px;
+  max-height: 480px;
+}
+@media (max-width: 500px) {
+  .slider-image {
+    max-width: 348px;
+    max-height: 348px;
+  }
 }
 
 .slider-description {
@@ -815,8 +862,13 @@ i {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  width: 480px;
+  max-width: 480px;
   text-align: center;
+}
+@media (max-width: 500px) {
+  .slider-description {
+    width: 100%;
+  }
 }
 
 .slider {
@@ -826,6 +878,21 @@ i {
   align-items: center;
   gap: 40px;
   align-self: stretch;
+}
+@media (max-width: 760px) {
+  .slider {
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .slider button {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .slider button {
+    display: none;
+  }
 }
 
 .slider-control {
@@ -866,14 +933,25 @@ i {
   flex-direction: row;
   flex-wrap: nowrap;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (max-width: 1440px) {
   .image-gallery {
     flex-wrap: wrap;
     justify-content: center;
   }
 }
+@media (max-width: 500px) {
+  .image-gallery {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .image-gallery {
+    flex-direction: column;
+  }
+}
 
 .image-gallery__item {
+  width: 100%;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
@@ -891,22 +969,32 @@ i {
 }
 
 .image-small {
-  width: 660px;
-  height: 430px;
+  max-width: 660px;
+  max-height: 430px;
 }
 @media (max-width: 768px) {
   .image-small {
-    width: 688px;
+    max-width: 688px;
+  }
+}
+@media (max-width: 500px) {
+  .image-small {
+    max-width: 348px;
   }
 }
 
 .image-large {
-  width: 660px;
+  max-width: 660px;
   height: 590px;
 }
 @media (max-width: 768px) {
   .image-large {
-    width: 688px;
+    max-width: 688px;
+  }
+}
+@media (max-width: 500px) {
+  .image-large {
+    width: 348px;
   }
 }
 
@@ -928,23 +1016,67 @@ i {
   flex-direction: row;
   gap: 100px;
 }
-.mobile-app img {
-  width: 630px;
-  height: 630px;
-}
-.mobile-app__content {
-  align-self: center;
-}
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (max-width: 1440px) {
   .mobile-app {
     flex-wrap: wrap;
     justify-content: center;
   }
 }
+@media (max-width: 768px) {
+  .mobile-app {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .mobile-app {
+    gap: 40px;
+  }
+}
+.mobile-app__content {
+  align-self: center;
+}
+@media (max-width: 1440px) {
+  .mobile-app__content {
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-app__content {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 500px) {
+  .mobile-app__content {
+    align-items: flex-start;
+  }
+}
+
+.mobile-app__image {
+  display: flex;
+  max-width: 630px;
+}
+@media (max-width: 500px) {
+  .mobile-app__image {
+    max-width: 348px;
+  }
+}
+
+.mobile-app__image img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
 .mobile-app__buttons {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+@media (max-width: 500px) {
+  .mobile-app__buttons {
+    flex-direction: column;
+  }
 }
 
 .menu {

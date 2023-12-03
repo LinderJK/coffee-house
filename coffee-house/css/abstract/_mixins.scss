@@ -42,7 +42,7 @@
 }
 
 @mixin media-laptop {
-  @media (min-width: $tablet-width) and (max-width: $content-width) { @content; }
+  @media (max-width: $content-width) { @content; }
 }
 
 
