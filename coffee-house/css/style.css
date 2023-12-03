@@ -555,6 +555,7 @@ i {
   display: flex;
   justify-content: flex-start;
   gap: 8px;
+  margin-bottom: 4px;
 }
 .item-content span {
   color: #E1D4C9;
@@ -1099,6 +1100,15 @@ i {
   line-height: 125%;
   color: #403F3D;
 }
+@media (max-width: 500px) {
+  .menu-title h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 125%;
+    color: #403F3D;
+  }
+}
 @media (max-width: 768px) {
   .menu-title {
     word-wrap: break-word;
@@ -1109,6 +1119,11 @@ i {
   display: flex;
   flex-direction: row;
   gap: 16px;
+}
+@media (max-width: 500px) {
+  .menu-tab {
+    gap: 8px;
+  }
 }
 
 .menu-content {
