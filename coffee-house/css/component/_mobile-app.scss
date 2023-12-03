@@ -16,6 +16,10 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  @include media-tablet {
+
+  }
 }
 
 .mobile-app__buttons {
