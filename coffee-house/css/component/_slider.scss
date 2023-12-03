@@ -1,5 +1,9 @@
 .favourites-coffee {
   @include flex-column ($gap:40px);
+
+  @include media-tablet {
+   text-align: center;
+  }
 }
 
 .slider-items__content {

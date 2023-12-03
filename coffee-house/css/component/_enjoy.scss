@@ -4,6 +4,10 @@
   background-image: url("../img/background/img-hero.jpg");
   background-size: auto;
 
+  @include media-tablet {
+    padding: 100px 60px;
+  }
+
   h1, p {
     color: $color-text-light;
     margin: 0;

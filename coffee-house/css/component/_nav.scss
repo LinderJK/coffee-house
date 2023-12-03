@@ -4,6 +4,10 @@
   cursor: pointer;
   padding: 0;
 
+  @include media-tablet {
+    display: none;
+  }
+
   &__item {
     display: inline-block;
     list-style: none;

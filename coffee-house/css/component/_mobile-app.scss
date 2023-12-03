@@ -11,6 +11,11 @@
     @extend %offer;
     align-self: center;
   }
+
+  @include media-laptop {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .mobile-app__buttons {

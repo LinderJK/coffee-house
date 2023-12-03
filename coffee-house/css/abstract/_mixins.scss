@@ -37,3 +37,16 @@
   }
 
 }
+
+@mixin media-laptop {
+  @media (min-width: $tablet-width) and (max-width: $content-width) { @content; }
+}
+
+
+@mixin media-tablet {
+  @media (max-width: $tablet-width) { @content;}
+}
+
+@mixin media-phone {
+  @media (max-width: $mobile-width) { @content;}
+}
