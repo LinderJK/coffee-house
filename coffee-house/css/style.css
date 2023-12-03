@@ -572,6 +572,11 @@ i {
   line-height: 150%;
   color: #403F3D;
 }
+@media (max-width: 768px) {
+  .menu-link {
+    display: none;
+  }
+}
 .menu-link--disabled {
   user-select: none;
 }
@@ -605,6 +610,51 @@ i {
 .logo__image {
   width: 100px;
   height: 60px;
+}
+
+.button-close__line, .button-close:after, .button-close:before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 1.5px;
+  background-color: #403F3D;
+  transition: transform 0.3s ease;
+}
+
+.button-burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid #665F55;
+}
+@media (max-width: 768px) {
+  .button-burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.button-close {
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+.button-close:before {
+  top: 0;
+  left: 0;
+}
+.button-close:after {
+  top: 0;
+  left: 0;
+}
+
+.button-close__line {
+  top: calc(50% + 3px);
+  left: 0;
 }
 
 .button-primary {
