@@ -31,10 +31,13 @@
     transition: all 500ms ease;
   }
 
-  &:hover::after {
-    transform: scaleX(1);
-    opacity: 1;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover::after {
+      transform: scaleX(1);
+      opacity: 1;
+    }
   }
+
 
 }
 

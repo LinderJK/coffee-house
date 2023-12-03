@@ -19,16 +19,21 @@
       </a>
       <nav>
         <ul class="nav">
-          <li class="nav__item"><a href="./index.html#favorite-coffe">Favorite coffee</a></li>
-          <li class="nav__item"><a href="./index.html#about">About</a></li>
-          <li class="nav__item"><a href="./index.html#mobile-app">Mobile app</a></li>
+          <li class="nav__item"><a href="#favorite-coffe">Favorite coffee</a></li>
+          <li class="nav__item"><a href="#about">About</a></li>
+          <li class="nav__item"><a href="#mobile-app">Mobile app</a></li>
           <li class="nav__item"><a href="#contact-us">Contact us</a></li>
         </ul>
       </nav>
-      <div class="menu-link menu-link--disabled">
+      <div class="menu-link menu-link--active">
         <div class="menu-link__item">
-          <a >Menu</a>
+          <a href="./menu.html">Menu</a>
           <img src="img/icons/coffee-cup.svg" alt="coffee-cup">
+        </div>
+      </div>
+      <div class="button-burger">
+        <div class="button-close">
+          <span class="button-close__line"></span>
         </div>
       </div>
     </div>
@@ -37,11 +42,8 @@
   <main>
     <section class="menu">
 
-      <div class="menu-head">
-        <div class="menu-head__title">
-          <h1></h1>
-          <h2> Behind each of our cups hides an <i>amazing surprise</i></h2>
-        </div>
+      <div class="menu-title">
+          <h1> Behind each of our cups hides an <i>amazing surprise</i></h1>
       </div>
 
       <div class="menu-tab tab">
@@ -66,7 +68,6 @@
       </div>
 
       <div class="menu-content">
-
 
         <div class="preview">
           <div class="preview__image" >
@@ -204,8 +205,13 @@
           </div>
         </div>
 
-
       </div>
+      <button class="button-icon button-icon--dark ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </section>
 
   </main>
@@ -242,24 +248,27 @@
           <h3>Contact us</h3>
           <ul class="link">
             <li class="link__item">
-              <div class="item-content">
-                <a href="https://maps.app.goo.gl/Gd12jDr4GczAuUi86" target="_blank" class="text-link">
+              <a href="https://maps.app.goo.gl/Gd12jDr4GczAuUi86" target="_blank" class="text-link">
+                <div class="item-content">
                   <img src="./img/icons/pin-alt.svg" alt="icon-address">
-                  8558 Green Rd.,  LA</a>
-              </div>
+                  <span>8558 Green Rd.,  LA</span>
+                </div>
+              </a>
             </li>
-            <li class="link__item">
-              <div class="item-content">
 
-                <a href="tel:+1603555-0123" class="text-link">
+            <li class="link__item">
+              <a href="tel:+1603555-0123" class="text-link">
+                <div class="item-content">
                   <img src="./img/icons/phone.svg" alt="icon-phone">
-                  +1 (603) 555-0123</a>
-              </div>
+                  <span>+1 (603) 555-0123</span>
+                </div>
+              </a>
             </li>
+
             <li class="link__item">
               <div class="item-content">
                 <img src="./img/icons/clock.svg" alt="icon-clock">
-                <p class="text-link">Mon-Sat: 9:00 AM – 23:00 PM</p>
+                <span class="text-link">Mon-Sat: 9:00 AM – 23:00 PM</span>
               </div>
             </li>
 

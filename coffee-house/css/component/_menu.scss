@@ -6,14 +6,16 @@
 
 }
 
-.menu-head {
+.menu-title {
+  display: flex;
   margin-bottom: -5px;
-  width: 800px;
+  max-width: 800px;
   text-align: center;
-  &__title {
-    h1 {
-      display: none;
-    }
+  & h1 {
+      @include font-h($size: 6rem);
+  }
+  @include media-tablet {
+    word-wrap: break-word;
   }
 }
 
@@ -33,6 +35,11 @@
   flex-wrap: wrap;
   cursor: pointer;
 
+  @include media-tablet {
+    *:nth-child(n+5) {
+      display: none;
+    }
+  }
 }
 
 .preview__description {
@@ -41,3 +48,11 @@
 
 }
 
+.menu .button-icon {
+  display: none;
+
+  @include media-tablet {
+    display: flex;
+    }
+
+}

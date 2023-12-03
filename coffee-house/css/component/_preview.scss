@@ -7,14 +7,13 @@
   max-width: 310px;
   height: 506px;
 
-  &:hover {
-    .preview__image img {
-      transform: scale(1.0);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .preview__image img {
+        transform: scale(1.0);
+      }
     }
   }
-
-
-
 
 }
 
