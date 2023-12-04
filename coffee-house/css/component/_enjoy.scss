@@ -1,8 +1,19 @@
 .enjoy {
+  display: flex;
   padding: 100px;
   border-radius: 40px;
   background-image: url("../img/background/img-hero.jpg");
-  background-size: auto;
+  background-size: cover;
+  background-position: center;
+
+
+  @include media-tablet {
+    padding: 100px 60px;
+  }
+
+  @include media-phone {
+    padding: 60px 16px;
+  }
 
   h1, p {
     color: $color-text-light;

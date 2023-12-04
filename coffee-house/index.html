@@ -31,11 +31,17 @@
           <img src="img/icons/coffee-cup.svg" alt="coffee-cup">
         </div>
       </div>
+        <div class="button-burger">
+          <div class="button-close">
+            <span class="button-close__line"></span>
+          </div>
+        </div>
       </div>
     </header>
 
     <main>
       <div class="container">
+
       <section class="enjoy">
         <div class="enjoy-content">
           <div class="enjoy-content__title">
@@ -55,7 +61,6 @@
     <section class="favourites-coffee" id="favorite-coffe">
         <h2>Choose your <i>favorite</i> coffee</h2>
         <div class="slider">
-
             <button class="button-icon button-icon--dark ">
               <svg class="icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
@@ -65,9 +70,9 @@
             <div class="slider-items__content">
               <img class="slider-image" src="./img/slider/slide-1.png" alt="">
               <div class="slider-description">
-                <h3>S’mores Frappuccino</h3>
-                <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-                <h3>$5.50</h3>
+                <h3 class="slider-description__title">S’mores Frappuccino</h3>
+                <p class="slider-description__text">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                <h3 class="slider-description__price">$5.50</h3>
               </div>
             </div>
             <button class="button-icon button-icon--dark ">
@@ -75,7 +80,6 @@
                 <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-
         </div>
       <ul class="slider-control">
         <li>
@@ -93,18 +97,25 @@
     <section class="about" id="about">
       <h2>Resource is <i>the perfect and cozy place</i> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
       <div class="image-gallery">
-        <div class="image-gallery__item">
-          <img src="./img/gallery/about-1.jpeg" alt="gallery-image-one">
+        <div class="gallery-col">
+          <div class="image-gallery__item image-large">
+            <img src="./img/gallery/about-1.jpeg" alt="gallery-image-one">
+          </div>
+          <div class="image-gallery__item image-small">
+            <img src="./img/gallery/about-2.jpeg" alt="gallery-image-two">
+          </div>
         </div>
-        <div class="image-gallery__item">
-          <img src="./img/gallery/about-2.jpeg" alt="gallery-image-two">
+
+        <div class="gallery-col">
+          <div class="image-gallery__item image-small">
+            <img src="./img/gallery/about-3.jpeg" alt="gallery-image-three">
+          </div>
+          <div class="image-gallery__item image-large">
+            <img src="./img/gallery/about-4.jpeg" alt="gallery-image-four">
+          </div>
         </div>
-        <div class="image-gallery__item">
-          <img src="./img/gallery/about-3.jpeg" alt="gallery-image-three">
-        </div>
-        <div class="image-gallery__item">
-          <img src="./img/gallery/about-4.jpeg" alt="gallery-image-four">
-        </div>
+
+
       </div>
     </section>
 
@@ -134,7 +145,10 @@
 
         </div>
       </div>
-      <img class="mobile-app__image" src="./img/mobile-app/mobile.png" alt="mobile-image">
+      <div class="mobile-app__image">
+        <img class="" src="./img/mobile-app/mobile.png" alt="mobile-image">
+      </div>
+
 
     </section>
       </div>
@@ -172,24 +186,27 @@
             <h3>Contact us</h3>
             <ul class="link">
               <li class="link__item">
-                <div class="item-content">
-                  <a href="https://maps.app.goo.gl/Gd12jDr4GczAuUi86" target="_blank" class="text-link">
+                <a href="https://maps.app.goo.gl/Gd12jDr4GczAuUi86" target="_blank" class="text-link">
+                  <div class="item-content">
                     <img src="./img/icons/pin-alt.svg" alt="icon-address">
-                    8558 Green Rd.,  LA</a>
-                </div>
+                    <span>8558 Green Rd.,  LA</span>
+                  </div>
+                </a>
               </li>
-              <li class="link__item">
-                <div class="item-content">
 
-                  <a href="tel:+1603555-0123" class="text-link">
+              <li class="link__item">
+                <a href="tel:+1603555-0123" class="text-link">
+                  <div class="item-content">
                     <img src="./img/icons/phone.svg" alt="icon-phone">
-                    +1 (603) 555-0123</a>
-                </div>
+                    <span>+1 (603) 555-0123</span>
+                  </div>
+                </a>
               </li>
+
               <li class="link__item">
                 <div class="item-content">
                   <img src="./img/icons/clock.svg" alt="icon-clock">
-                  <p class="text-link">Mon-Sat: 9:00 AM – 23:00 PM</p>
+                  <span class="text-link">Mon-Sat: 9:00 AM – 23:00 PM</span>
                 </div>
               </li>
 

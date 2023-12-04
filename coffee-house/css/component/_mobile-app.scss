@@ -3,19 +3,69 @@
   flex-direction: row;
   gap: 100px;
 
-  img {
-    width: 630px;
-    height: 630px;
+  @include media-laptop {
+    flex-wrap: wrap;
+    justify-content: center;
   }
+
+  @include media-tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media-phone {
+    gap: 40px;
+  }
+
+
+
+
   &__content {
     @extend %offer;
     align-self: center;
+
+
+    @include media-laptop {
+     align-items: center;
+
+    }
+    @include media-tablet {
+      align-items: flex-start;
+
+    }
+    @include media-phone {
+      align-items: flex-start;
+
+    }
   }
+
+}
+
+.mobile-app__image {
+    display: flex;
+    max-width: 630px;
+
+    @include media-phone {
+      max-width: 348px;
+    }
+
+}
+
+.mobile-app__image img {
+  height:auto;
+  width: 100%;
+  object-fit: cover;
+
 }
 
 .mobile-app__buttons {
   display: flex;
   flex-direction: row;
   gap: 20px;
+
+  @include media-phone {
+   flex-direction: column;
+
+  }
 
 }

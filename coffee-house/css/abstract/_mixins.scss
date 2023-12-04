@@ -31,9 +31,25 @@
     transition: all 500ms ease;
   }
 
-  &:hover::after {
-    transform: scaleX(1);
-    opacity: 1;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover::after {
+      transform: scaleX(1);
+      opacity: 1;
+    }
   }
 
+
+}
+
+@mixin media-laptop {
+  @media (max-width: $content-width) { @content; }
+}
+
+
+@mixin media-tablet {
+  @media (max-width: $tablet-width) { @content;}
+}
+
+@mixin media-phone {
+  @media (max-width: $mobile-width) { @content;}
 }

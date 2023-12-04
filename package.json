@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "style": "sass coffee-house/css/style.scss coffee-house/css/build/style.css"
+    "style": "sass --watch coffee-house/css/style.scss coffee-house/css/style.css"
   },
   "author": "",
   "license": "ISC",

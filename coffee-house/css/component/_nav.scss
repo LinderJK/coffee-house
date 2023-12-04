@@ -4,6 +4,10 @@
   cursor: pointer;
   padding: 0;
 
+  @include media-tablet {
+    display: none;
+  }
+
   &__item {
     display: inline-block;
     list-style: none;
@@ -17,6 +21,10 @@
 
 .menu-link {
   @include font-h($weight:600, $line-height:150%);
+
+  @include media-tablet {
+    display: none;
+  }
 
   &--disabled {
     user-select: none;
@@ -43,3 +51,5 @@
     height: 60px;
   }
 }
+
+

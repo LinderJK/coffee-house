@@ -20,10 +20,18 @@ h1, h2, h3, h4, h5, p {
 
 h1 {
   @include font-h($size: 7.2rem, $line-height: 105%);
+
+  @include media-phone {
+    @include font-h($size: 4.2rem, $line-height: 115%);
+  }
 }
 
 h2 {
   @include font-h($size: 6rem);
+
+  @include media-phone {
+    @include font-h($size: 3.2rem, $line-height: 125%);
+  }
 }
 
 h3 {

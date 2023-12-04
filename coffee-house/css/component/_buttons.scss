@@ -15,12 +15,15 @@
 
   }
 
-  &:hover {
-    .button-primary__icon {
-      opacity: 1;
-    }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .button-primary__icon {
+        opacity: 1;
+      }
 
+    }
   }
+
 
 }
 
@@ -39,24 +42,89 @@
 
   &--dark {
     border: 1px solid $color-border-dark;
-    &:hover {
-      background: $color-background-container;
-      .icon path {
-        stroke: $color-border-light;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: $color-background-container;
+        .icon path {
+          stroke: $color-border-light;
+        }
       }
     }
+
   }
 
   &--light {
     border: 1px solid $color-border-light;
-    &:hover {
-      background: $color-background-body;
-      .icon path {
-        stroke: #403F3D;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: $color-background-body;
+        .icon path {
+          stroke: #403F3D;
+        }
       }
     }
+
   }
 
+}
+
+
+
+%button-close-line {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 1.5px;
+  background-color: $color-text-dark;
+  transition: transform 0.3s ease;
+
+}
+
+.button-burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid $color-border-dark;
+
+
+  @include media-tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
+
+.button-close {
+  width: 16px;
+  height: 16px;
+  position: relative;
+
+  &:before {
+    @extend %button-close-line;
+    top: 0;
+    left: 0;
+
+
+  }
+
+  &:after {
+    @extend %button-close-line;
+    top: 0;
+    left: 0;
+  }
+
+}
+
+.button-close__line {
+  @extend %button-close-line;
+  top: calc(50% + 3px);
+  left: 0;
 }
 
 
@@ -72,17 +140,20 @@
     align-items: flex-start;
   }
 
-  &:hover {
-    background-color: $color-background-container;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: $color-background-container;
 
-    .text {
-      color: $color-text-light;
-    }
-    .apple-path {
-      fill:  #EA4335;
-    }
+      .text {
+        color: $color-text-light;
+      }
+      .apple-path {
+        fill:  #EA4335;
+      }
 
+    }
   }
+
 
 }
 
@@ -105,11 +176,14 @@
     cursor: default;
   }
 
-  &:hover {
-    background-color: $color-background-container;
-    color: $color-text-light;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: $color-background-container;
+      color: $color-text-light;
 
+    }
   }
+
 
   &__icon {
     width: 30px;
@@ -117,5 +191,8 @@
 
   }
 }
+
+
+
 
 
