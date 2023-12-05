@@ -1,22 +1,74 @@
-const button = document.querySelector('.button-burger');
-const nav = document.querySelector('.nav');
-const menu = document.querySelector('.menu-link');
+class BurgerMenu {
+  static  button = document.querySelector('.button-burger');
+  static  nav = document.querySelector('.nav');
+  static  menu = document.querySelector('.menu-link');
+  static  navLink = document.querySelectorAll('.nav__item');
 
-function toggle () {
-  button.classList.toggle('button-burger--active');
-  nav.classList.toggle('burger--active');
-  nav.append(menu);
-  menu.style.display = 'block';
-  scrollControl();
-}
+  static menuDefaultParent = document.querySelector('.header__navigation');
+  static menuDefaultDisplay = BurgerMenu.menu.style.display;
 
-function scrollControl () {
-  if (nav.classList.contains('burger--active')) {
+  static isOpen = false;
+
+
+  static init (){
+    BurgerMenu.isOpen ? BurgerMenu.close() : BurgerMenu.open();
+  }
+
+  static open () {
+    BurgerMenu.button.classList.add('button-burger--active');
+    BurgerMenu.nav.classList.add('burger--active');
+    BurgerMenu.isOpen = true;
+    BurgerMenu.menuMove();
+    BurgerMenu.scrollControl();
+    BurgerMenu.LinkListener();
+
+  }
+
+  static close () {
+    BurgerMenu.button.classList.remove('button-burger--active');
+    BurgerMenu.nav.classList.remove('burger--active');
+    BurgerMenu.isOpen = false;
+    BurgerMenu.menuMove();
+    BurgerMenu.scrollControl();
+    BurgerMenu.LinkListener();
+  }
+
+  static menuMove () {
+    if (BurgerMenu.isOpen) {
+      BurgerMenu.nav.append(BurgerMenu.menu);
+      BurgerMenu.menu.style.display = 'block';
+
+  }
+  else {
+      BurgerMenu.menuDefaultParent.append(BurgerMenu.menu);
+      BurgerMenu.menu.style.display = BurgerMenu.menuDefaultDisplay;
+  }
+
+  }
+
+  static LinkListener (flag) {
+    BurgerMenu.navLink.forEach(element => {
+      if (BurgerMenu.isOpen) {
+        element.addEventListener('click', BurgerMenu.close);
+      }
+      else {
+        element.removeEventListener('click', BurgerMenu.close);
+      }
+    })
+  }
+
+  static scrollControl (){
+  if (BurgerMenu.isOpen) {
     document.body.classList.add('no-scroll');
   }
   else {
     document.body.classList.remove('no-scroll');
   }
+  }
+
 }
 
-button.addEventListener('click', toggle );
+BurgerMenu.button.addEventListener('click', BurgerMenu.init);
+
+
+
