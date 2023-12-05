@@ -1,7 +1,6 @@
 .nav {
   display: flex;
   gap: 40px;
-  cursor: pointer;
   padding: 0;
 
   @include media-tablet {
@@ -13,11 +12,17 @@
     list-style: none;
     text-decoration: none;
     padding-bottom: 4px;
-    @include item-underline($color:$color-border-dark);
     @include font-h($weight:600, $line-height:150%);
+
+    @media (hover: hover) and (pointer: fine) {
+      cursor: pointer;
+      @include item-underline($color:$color-border-dark);
+    }
   }
 
 }
+
+
 
 .menu-link {
   @include font-h($weight:600, $line-height:150%);
@@ -28,12 +33,13 @@
 
   &--disabled {
     user-select: none;
-
   }
 
   &--active {
-    cursor: pointer;
-    @include item-underline($color:$color-border-dark);
+    @media (hover: hover) and (pointer: fine) {
+      cursor: pointer;
+      @include item-underline($color:$color-border-dark);
+    }
   }
 
   &__item {

@@ -67,3 +67,7 @@ i {
   @include font-h($size:16px, $weight:600, $line-height:150%);
 }
 
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
