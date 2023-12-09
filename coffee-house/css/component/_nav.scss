@@ -33,6 +33,10 @@
 
   &--disabled {
     user-select: none;
+    pointer-events: none;
+    cursor: default;
+    @include item-underline-static($color:$color-border-dark);
+
   }
 
   &--active {
@@ -40,6 +44,8 @@
       cursor: pointer;
       @include item-underline($color:$color-border-dark);
     }
+
+
   }
 
   &__item {
