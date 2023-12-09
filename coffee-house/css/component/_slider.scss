@@ -9,6 +9,10 @@
 .slider-wrapper {
   max-width: 480px;
   overflow: hidden;
+
+  @include media-phone {
+    max-width: 348px ;
+  }
 }
 
 .slider-items {
@@ -94,19 +98,30 @@
     height: 4px;
     border-radius: 100px;
     background: $color-border-light;
-    cursor: pointer;
-    @extend %transition;
+    //cursor: pointer;
+    //@extend %transition;
 
     &--active {
-      background: $color-border-dark;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
+      .slider-control__item-progress {
+        height: 100%;
+        width: 0;
         background: $color-border-dark;
+        border-radius: 100px;
+        //animation: progress 5s linear forwards;
       }
     }
+
+    //@media (hover: hover) and (pointer: fine) {
+    //  &:hover {
+    //    background: $color-border-dark;
+    //  }
+    //}
 
   }
 
 }
+
+//@keyframes progress {
+//  0% { width: 0; }
+//  100% { width: 100%; }
+//}
