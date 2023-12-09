@@ -33,6 +33,7 @@ class BurgerMenu {
     BurgerMenu.LinkListener();
   }
 
+  //Moving the menu to the navigation. I was reluctant to change the markup
   static menuMove () {
     if (BurgerMenu.isOpen) {
       BurgerMenu.nav.append(BurgerMenu.menu);

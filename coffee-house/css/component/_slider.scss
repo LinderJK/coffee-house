@@ -6,12 +6,30 @@
   }
 }
 
-.slider-items__content {
+.slider-wrapper {
+  max-width: 480px;
+  overflow: hidden;
+}
+
+.slider-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  transition: transform 500ms ease-in-out;
+
+
+
+  @include media-tablet {
+
+  }
+}
+
+.item {
   @include flex-column($gap:20px);
 
 }
 
-.slider-image {
+.item__image {
   max-width: 480px;
   max-height: 480px;
 
@@ -21,8 +39,9 @@
   }
 }
 
-.slider-description {
+.item__description {
   @include flex-column ($gap:16px);
+  word-wrap: break-word;
   max-width: 480px;
   text-align: center;
 

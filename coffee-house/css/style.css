@@ -818,34 +818,46 @@ i {
   }
 }
 
-.slider-items__content {
+.slider-wrapper {
+  max-width: 480px;
+  overflow: hidden;
+}
+
+.slider-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  transition: transform 500ms ease-in-out;
+}
+.item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.slider-image {
+.item__image {
   max-width: 480px;
   max-height: 480px;
 }
 @media (max-width: 500px) {
-  .slider-image {
+  .item__image {
     max-width: 348px;
     max-height: 348px;
   }
 }
 
-.slider-description {
+.item__description {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  word-wrap: break-word;
   max-width: 480px;
   text-align: center;
 }
 @media (max-width: 500px) {
-  .slider-description {
+  .item__description {
     width: 100%;
   }
 }
