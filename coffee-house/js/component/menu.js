@@ -1,27 +1,59 @@
 class Menu {
 
   static container = document.querySelector('.menu-content');
-  static menu = {};
+  static tabItem = document.querySelectorAll('.tab-item');
 
-  static menuParser () {
-    fetch('./data/products.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error ('json not found');
+  static menu;
+  // static map;
+  static menuCoffee;
+  static menuTea;
+  static menuDessert ;
 
-        }
-        return response.json();
+  static async jsonParse () {
+    try {
+      const response = await fetch('./data/products.json');
+      if (!response.ok) {
+        throw new Error ('json not found');
+      }
+      Menu.menu = await response.json();
+      // Menu.map = Menu.createMap(Menu.menu);
+      } catch (e) {
+      console.error('error');
+    }
+  }
 
-      })
-      .then(data => {
-        Menu.menu = data;
-        console.log (Menu.menu);
-      })
+  static async init() {
+    await Menu.jsonParse();
+    Menu.menuCoffee = Menu.sortCategory('coffee');
+    Menu.menuTea = Menu.sortCategory('tea');
+    Menu.menuDessert = Menu.sortCategory('dessert');
+    console.log(Menu.menuCoffee, Menu.menuTea, Menu.menuDessert);
+    console.log(Menu.menu)
+    Menu.createCategoryList(Menu.menuCoffee);
+  }
+
+
+  static selectCategory() {
+
 
   }
 
-  static init () {
-    Menu.checkCard();
+  // static createMap (data) {
+  //   const map = new Map();
+  //   data.forEach(item => map.set(item.name, item));
+  //   return map;
+  //
+  // }
+
+  static sortCategory (category) {
+    return Menu.menu.filter(item => item.category === `${category}`);
+  }
+
+  static createCategoryList (data) {
+    data.forEach(item => {
+      const card = Menu.createCard(item.link, item.name, item.description, item.price);
+      Menu.container.append(card);
+    })
   }
 
   static createCard (imgLink, name, description,price) {
@@ -53,7 +85,7 @@ class Menu {
     const descriptionPrice = document.createElement('div');
     descriptionPrice.className='preview__description-price';
     const headingPrice = document.createElement('h3');
-    headingPrice.textContent = `${price}`;
+    headingPrice.textContent = `$${price}`;
     descriptionPrice.append(headingPrice);
 
     previewDescription.append(descriptionInfo, descriptionPrice);
@@ -61,10 +93,7 @@ class Menu {
 
   }
 
-  static checkCard () {
-    const first = Menu.createCard('./img/menu/coffee-2.jpg', '1', '1','1')
-    Menu.container.append(first);
-  }
+
 
 
 }
