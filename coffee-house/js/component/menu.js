@@ -29,14 +29,55 @@ class Menu {
     Menu.menuDessert = Menu.sortCategory('dessert');
     console.log(Menu.menuCoffee, Menu.menuTea, Menu.menuDessert);
     console.log(Menu.menu)
+    Menu.addListeners();
     Menu.createCategoryList(Menu.menuCoffee);
+
+  }
+
+
+  static addListeners() {
+    Menu.tabItem.forEach( item => item.addEventListener('click', (evt)=> Menu.changeCategory(item, evt)));
+  }
+
+  static changeCategory (ClickedItem, event) {
+    if (!event) {
+      return;
+    }
+    const clickedCategory = event.currentTarget;
+
+    Menu.tabItem.forEach(item => {
+      if (item === clickedCategory) {
+        item.classList.add('tab-item--active');
+      } else {
+        item.classList.remove('tab-item--active');
+      }
+    });
+
+    let selectedCategory = [];
+    switch (clickedCategory.querySelector('.tab-item__name').textContent) {
+      case 'Coffee':
+        selectedCategory = Menu.menuCoffee;
+        Menu.createCategoryList(Menu.menuCoffee);
+        break;
+      case 'Tea':
+        selectedCategory = Menu.menuTea;
+        break;
+      case 'Dessert':
+        selectedCategory = Menu.menuDessert;
+        break;
+    }
+
+
+    Menu.clearMenu ();
+    Menu.createCategoryList(selectedCategory);
   }
 
 
-  static selectCategory() {
-
-
+  //TODO: ADD ANIMATION
+  static clearMenu () {
+    Menu.container.innerHTML = '';
   }
+
 
   // static createMap (data) {
   //   const map = new Map();
