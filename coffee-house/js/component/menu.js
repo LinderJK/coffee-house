@@ -78,7 +78,6 @@ class Menu {
     Menu.container.innerHTML = '';
   }
 
-
   // static createMap (data) {
   //   const map = new Map();
   //   data.forEach(item => map.set(item.name, item));
