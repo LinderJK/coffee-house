@@ -1,3 +1,3 @@
 window.addEventListener("load", (event) => {
-  Menu.menuParser();
+  Menu.init();
 });
