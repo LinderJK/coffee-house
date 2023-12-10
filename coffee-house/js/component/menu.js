@@ -2,12 +2,15 @@ class Menu {
 
   static container = document.querySelector('.menu-content');
   static tabItem = document.querySelectorAll('.tab-item');
-
+  static button = document.querySelector('#download');
   static menu;
   // static map;
   static menuCoffee;
   static menuTea;
   static menuDessert ;
+  static selectedCategory = [];
+  static itemsToShow = 4;
+  static itemsLoaded = Menu.itemsToShow;
 
   static async jsonParse () {
     try {
@@ -24,27 +27,51 @@ class Menu {
 
   static async init() {
     await Menu.jsonParse();
-    Menu.menuCoffee = Menu.sortCategory('coffee');
-    Menu.menuTea = Menu.sortCategory('tea');
-    Menu.menuDessert = Menu.sortCategory('dessert');
-    console.log(Menu.menuCoffee, Menu.menuTea, Menu.menuDessert);
-    console.log(Menu.menu)
+    Menu.menuCoffee = Menu.sortMenu('coffee');
+    Menu.menuTea = Menu.sortMenu('tea');
+    Menu.menuDessert = Menu.sortMenu('dessert');
+    Menu.selectedCategory = Menu.menuCoffee;
     Menu.addListeners();
-    Menu.createCategoryList(Menu.menuCoffee);
+    Menu.updateView(Menu.selectedCategory);
+    // DialogCreator.init(Menu.menuCoffee);
 
+  }
+
+  static  loadItem () {
+    Menu.itemsToShow +=4;
+    console.log(Menu.selectedCategory);
+    Menu.updateView(Menu.selectedCategory);
+  }
+
+  static updateView (category) {
+    const itemsToShow = Menu.isSmallScreen() ? Menu.itemsToShow: category.length;
+    const items = category.slice(0, itemsToShow);
+    Menu.clearMenu();
+    Menu.createCardList(items);
+
+    if (category.length <= itemsToShow) {
+      Menu.button.style.display = 'none';
+    } else {
+      Menu.button.style.display = 'flex';
+    }
+
+  }
+
+  static isSmallScreen () {
+    return window.innerWidth <= 768;
   }
 
 
   static addListeners() {
-    Menu.tabItem.forEach( item => item.addEventListener('click', (evt)=> Menu.changeCategory(item, evt)));
+    Menu.tabItem.forEach( item => item.addEventListener('click', (evt)=> Menu.changeCategory(evt)));
+    Menu.button.addEventListener('click', Menu.loadItem);
   }
 
-  static changeCategory (ClickedItem, event) {
+  static changeCategory (event) {
     if (!event) {
       return;
     }
     const clickedCategory = event.currentTarget;
-
     Menu.tabItem.forEach(item => {
       if (item === clickedCategory) {
         item.classList.add('tab-item--active');
@@ -53,44 +80,32 @@ class Menu {
       }
     });
 
-    let selectedCategory = [];
+
     switch (clickedCategory.querySelector('.tab-item__name').textContent) {
       case 'Coffee':
-        selectedCategory = Menu.menuCoffee;
-        Menu.createCategoryList(Menu.menuCoffee);
+        Menu.selectedCategory = Menu.menuCoffee;
         break;
       case 'Tea':
-        selectedCategory = Menu.menuTea;
+        Menu.selectedCategory = Menu.menuTea;
         break;
       case 'Dessert':
-        selectedCategory = Menu.menuDessert;
+        Menu.selectedCategory = Menu.menuDessert;
         break;
     }
 
+    Menu.clearMenu();
+    Menu.itemsToShow = 4;
+    Menu.updateView(Menu.selectedCategory);
+    DialogCreator.init(Menu.selectedCategory);
 
-    Menu.clearMenu ();
-    Menu.createCategoryList(selectedCategory);
   }
 
-
-  //TODO: ADD ANIMATION
-  static clearMenu () {
-    Menu.container.innerHTML = '';
-  }
-
-  // static createMap (data) {
-  //   const map = new Map();
-  //   data.forEach(item => map.set(item.name, item));
-  //   return map;
-  //
-  // }
-
-  static sortCategory (category) {
+  static sortMenu (category) {
     return Menu.menu.filter(item => item.category === `${category}`);
   }
 
-  static createCategoryList (data) {
-    data.forEach(item => {
+  static createCardList (category) {
+    category.forEach(item => {
       const card = Menu.createCard(item.link, item.name, item.description, item.price);
       Menu.container.append(card);
     })
@@ -134,6 +149,23 @@ class Menu {
   }
 
 
+
+
+
+
+
+  //TODO: ADD ANIMATION
+  static clearMenu () {
+    Menu.container.innerHTML = '';
+  }
+
+
+  // static createMap (data) {
+  //   const map = new Map();
+  //   data.forEach(item => map.set(item.name, item));
+  //   return map;
+  //
+  // }
 
 
 }

@@ -1142,11 +1142,6 @@ i {
   flex-wrap: wrap;
   cursor: pointer;
 }
-@media (max-width: 768px) {
-  .menu-content *:nth-child(n+5) {
-    display: none;
-  }
-}
 
 .preview__description {
   display: flex;
