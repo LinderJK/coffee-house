@@ -30,11 +30,9 @@ class DialogCreator {
 
         if (selectedItem) {
           DialogCreator.changeDialog(selectedItem);
-          console.log(selectedItem)
           DialogCreator.dialogOpen();
         }
         else   {
-          console.log('click item not found')
         }
       }
 
@@ -46,7 +44,6 @@ class DialogCreator {
     const currentItem = selectedItem;
     const additives = selectedItem.additives;
     const size = selectedItem.sizes;
-    console.log(additives)
     this.modal.querySelector('.modal__image img').src = selectedItem.link;
     this.modal.querySelector('.modal-product-name').textContent = selectedItem.name;
     this.modal.querySelector('.modal-product-description').textContent = selectedItem.description;
@@ -74,8 +71,6 @@ class DialogCreator {
   }
 
   static buttonSelect (type, elem) {
-    console.log('buttonSelect')
-    console.log(type,elem);
     if (type === 'priceSize') {
       DialogCreator.clearButton();
       elem.classList.toggle('tab-item--active');
@@ -94,7 +89,6 @@ class DialogCreator {
     DialogCreator.configurationSizeTabs.forEach(elem => {
       if (elem.classList.contains('tab-item--active')) {
         const price = elem.querySelector('.tab-item__name').getAttribute('price');
-        console.log(price, typeof price);
          fullPrice+= +price;
       }
     })
@@ -102,7 +96,6 @@ class DialogCreator {
     DialogCreator.configurationAddTabs.forEach(elem => {
       if (elem.classList.contains('tab-item--active')) {
         const price = elem.querySelector('.tab-item__name').getAttribute('price');
-        console.log(price, typeof price);
         fullPrice+= +price;
       }
     })

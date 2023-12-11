@@ -43,11 +43,9 @@
   flex-wrap: wrap;
   cursor: pointer;
 
-  //@include media-tablet {
-  //  *:nth-child(n+5) {
-  //    display: none;
-  //  }
-  //}
+  @include media-phone {
+    justify-content: center;
+  }
 }
 
 .preview__description {
