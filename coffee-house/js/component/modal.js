@@ -1,13 +1,16 @@
 class DialogCreator {
 
   static modal = document.querySelector('#modal');
+  static buttonClose = document.querySelector('.modal-close');
   static isOpen = false;
   static preview;
   static category;
+  static totalPrice = 0;
 
   static  init (category) {
     DialogCreator.category = category;
     Menu.container.addEventListener('click', (event)=> DialogCreator.selectClickItem(event));
+    DialogCreator.buttonClose.addEventListener('click', (event)=> DialogCreator.dialogClose());
 
 
   }
@@ -20,8 +23,9 @@ class DialogCreator {
         const selectedItem = DialogCreator.category.find(item => item.name === itemName);
 
         if (selectedItem) {
-          // DialogCreator.createDialog(selectedItem);
+          DialogCreator.changeDialog(selectedItem);
           console.log(selectedItem)
+          DialogCreator.dialogOpen();
         }
         else   {
           console.log('click item not found')
@@ -30,50 +34,26 @@ class DialogCreator {
 
 
   }
-  static  createDialog (data) {
 
+  //TODO: hardcoded go fix this
+  static changeDialog (selectedItem) {
+    const currentItem = selectedItem;
+    const additives = selectedItem.additives;
+    const size = selectedItem.sizes;
+    console.log(additives, size)
+    this.modal.querySelector('.modal__image img').src = selectedItem.link;
+    this.modal.querySelector('.modal-product-name').textContent = selectedItem.name;
+    this.modal.querySelector('.modal-product-description').textContent = selectedItem.description;
 
-    //Создание структуры
-    const modal = document.createElement('div');
-    modal.className = 'modal-body';
-    const imageContainer = document.createElement('div');
-    imageContainer.className = 'modal__image';
-    const descriptionContainer = document.createElement('div');
-    descriptionContainer.className = 'modal__description';
-    modal.append(imageContainer, descriptionContainer);
+    const tabsAdditives = this.modal.querySelectorAll('#tab-additives .tab-item__name');
+    for (let i = 0; i < tabsAdditives.length; i ++) {
+      tabsAdditives[i].textContent = additives[i].name;
+    }
 
-    // Создание изображения
-    const image = document.createElement('img');
-    image.src = `${data.link}`;
-    imageContainer.append(image);
-
-    const descriptionInfo = document.createElement('div');
-    descriptionInfo.className = 'preview__description-info';
-    // Создание заголовка h3
-    const heading = document.createElement('h3');
-    heading.textContent = `${name}`
-    // Создание абзаца p
-    const paragraph = document.createElement('p');
-    paragraph.textContent = `${description}`;
-    descriptionInfo.append(heading, paragraph);
-
-    // Создание цены
-    const descriptionPrice = document.createElement('div');
-    descriptionPrice.className='preview__description-price';
-    const headingPrice = document.createElement('h3');
-    headingPrice.textContent = `$${price}`;
-    descriptionPrice.append(headingPrice);
-
-    previewDescription.append(descriptionInfo, descriptionPrice);
-    return modal;
-
-
-    // DialogCreator.modal.textContent = `${data.description}`;
-    // DialogCreator.dialogOpen();
-
-
-
-
+    const tabsSize = this.modal.querySelectorAll('#tab-size .tab-item__name');
+    for (let i = 0; i < tabsSize.length; i ++) {
+      tabsAdditives[i].textContent = additives[i].name;
+    }
 
   }
 

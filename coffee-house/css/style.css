@@ -1303,6 +1303,12 @@ dialog::backdrop {
     right: 0;
   }
 }
+dialog {
+  padding: 0;
+  border: none;
+  border-radius: 40px;
+}
+
 .modal {
   display: flex;
   width: 800px;
@@ -1374,6 +1380,35 @@ dialog::backdrop {
   gap: 8px;
   padding: 10px 0 12px 0;
   border-top: 1px solid #C1B6AD;
+}
+
+.modal-close {
+  width: 100%;
+}
+
+dialog[open] {
+  -webkit-animation: animate-show 1s ease normal;
+}
+
+@-webkit-keyframes animate-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+dialog.hide {
+  -webkit-animation: animate-hide 1s ease normal;
+}
+
+@-webkit-keyframes animate-hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

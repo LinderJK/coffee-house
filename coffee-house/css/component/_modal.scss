@@ -1,8 +1,13 @@
+dialog {
+  padding: 0;
+  border: none;
+  border-radius: 40px;
+}
+
 .modal {
   display: flex;
   width: 800px;
   padding: 16px;
-  //gap: 20px;
   border-radius: 40px;
   border: none;
   background-color: $color-background-body;
@@ -11,8 +16,6 @@
   &:focus-visible {
     outline: none;
   }
-
-
 
 }
 
@@ -79,4 +82,31 @@
   border-top: 1px solid $color-border-light;
 }
 
+.modal-close {
+  width: 100%;
+}
 
+dialog[open] {
+  -webkit-animation: animate-show 1s ease normal;
+}
+@-webkit-keyframes animate-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+//TODO: fix animation
+dialog.hide {
+  -webkit-animation: animate-hide 1s ease normal;
+}
+@-webkit-keyframes animate-hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

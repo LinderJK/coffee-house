@@ -1,7 +1,7 @@
 class Menu {
 
   static container = document.querySelector('.menu-content');
-  static tabItem = document.querySelectorAll('.tab-item');
+  static tabItem = document.querySelectorAll('.menu-tab .tab-item');
   static button = document.querySelector('#download');
   static menu;
   // static map;
