@@ -40,7 +40,7 @@
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       background: $color-background-container;
-
+      color: $color-text-light;
     }
   }
 }
@@ -134,10 +134,14 @@
   @extend  %transition;
   cursor: pointer;
 
+  &:focus-visible {
+    outline: none;
+  }
   &--active {
     background-color: $color-background-container;
     color: $color-text-light;
     cursor: default;
+
   }
 
   @media (hover: hover) and (pointer: fine) {

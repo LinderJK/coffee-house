@@ -714,6 +714,7 @@ dialog::backdrop {
 @media (hover: hover) and (pointer: fine) {
   .button-secondary:hover {
     background: #665F55;
+    color: #E1D4C9;
   }
 }
 
@@ -784,6 +785,9 @@ dialog::backdrop {
   background-color: inherit;
   color: #403F3D;
   cursor: pointer;
+}
+.tab-item:focus-visible {
+  outline: none;
 }
 .tab-item--active {
   background-color: #665F55;
