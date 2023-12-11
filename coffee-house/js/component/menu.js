@@ -33,7 +33,7 @@ class Menu {
     Menu.selectedCategory = Menu.menuCoffee;
     Menu.addListeners();
     Menu.updateView(Menu.selectedCategory);
-    // DialogCreator.init(Menu.menuCoffee);
+    DialogCreator.init(Menu.selectedCategory);
 
   }
 
@@ -65,6 +65,8 @@ class Menu {
   static addListeners() {
     Menu.tabItem.forEach( item => item.addEventListener('click', (evt)=> Menu.changeCategory(evt)));
     Menu.button.addEventListener('click', Menu.loadItem);
+
+
   }
 
   static changeCategory (event) {
@@ -107,6 +109,7 @@ class Menu {
   static createCardList (category) {
     category.forEach(item => {
       const card = Menu.createCard(item.link, item.name, item.description, item.price);
+      card.dataset.itemName = item.name;
       Menu.container.append(card);
     })
   }

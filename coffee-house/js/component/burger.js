@@ -65,6 +65,7 @@ class BurgerMenu {
   else {
     document.body.classList.remove('no-scroll');
   }
+
   }
 
 }

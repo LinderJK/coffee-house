@@ -27,6 +27,24 @@
 
 }
 
+.button-secondary {
+  @extend %button;
+  display: flex;
+  padding: 10px 78px;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-background-body;
+  border: 1px solid $color-border-dark;
+  @extend %transition;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: $color-background-container;
+
+    }
+  }
+}
+
 .button-icon {
   display: flex;
   width: 60px;

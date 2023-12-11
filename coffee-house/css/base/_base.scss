@@ -71,3 +71,7 @@ i {
   height: 100%;
   overflow: hidden;
 }
+
+dialog::backdrop {
+  background-color: $color-background-backdrop;
+}

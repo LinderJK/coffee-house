@@ -276,7 +276,80 @@
       </div>
     </div>
   </footer>
-  <dialog id="modal"></dialog>
+  <dialog class="modal" id="modal" open>
+    <div class="modal__image">
+      <img src="./img/menu/coffee/Irish-coffee.jpg" alt="">
+    </div>
+    <div class="modal__content">
+      <div class="modal__content-title">
+        <h3>Irish coffee</h3>
+        <p>Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+      </div>
+      <div class="modal__content-tabs" >
+        <p>Size</p>
+        <div class="modal-tab tab" id="tab-size">
+          <button class="tab-item tab-item--active">
+          <span class="tab-item__icon">
+            <img src="./img/icons/icon-s-size.svg" alt="icon-phone">
+          </span>
+            <span class="tab-item__name">200 ml</span>
+          </button>
+          <button class="tab-item">
+          <span class="tab-item__icon">
+            <img src="./img/icons/icon-m-size.svg" alt="icon-phone">
+          </span>
+            <span class="tab-item__name">300 ml</span>
+          </button>
+          <button class="tab-item">
+          <span class="tab-item__icon">
+            <img src="./img/icons/icon-l-size.svg" alt="icon-phone">
+          </span>
+            <span class="tab-item__name">400 ml</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal__content-tabs" >
+        <p>Additives</p>
+        <div class="modal-tab tab" id="tab-additives">
+          <button class="tab-item tab-item--active">
+          <span class="tab-item__icon">
+            <img src="./img/icons/icon-ad-1.svg" alt="icon-phone">
+          </span>
+            <span class="tab-item__name">Sugar</span>
+          </button>
+          <button class="tab-item">
+          <span class="tab-item__icon">
+            <img src="./img/icons/icon-ad-2.svg" alt="icon-phone">
+          </span>
+            <span class="tab-item__name">Cinnamon</span>
+          </button>
+          <button class="tab-item">
+          <span class="tab-item__icon">
+            <img src="./img/icons/icon-ad-3.svg" alt="icon-phone">
+          </span>
+            <span class="tab-item__name">Syrup</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal__content-price">
+        <h3 >Total:</h3>
+        <h3>$7.00</h3>
+
+
+      </div>
+      <div class="modal__content-alert">
+        <div class="alert-icon">
+          <img src="./img/icons/info-empty.svg">
+        </div>
+        <div class="alert-description ">
+
+          <p class="text-caption ">The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
+        </div>
+      </div>
+      <button class="button-secondary modal-close">Close</button>
+    </div>
+
+  </dialog>
 
 </div>
 <script src="./js/script_menu.js"></script>
